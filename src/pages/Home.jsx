@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
+import { getAll, STORAGE_KEYS } from '../data/storage';
 
 export default function Home({ currentUser }) {
+  const [stats, setStats] = useState({
+    workers: 0,
+    jobs: 0,
+    companies: 0,
+  });
+
+  useEffect(() => {
+    const users = getAll(STORAGE_KEYS.USERS);
+    const jobs = getAll(STORAGE_KEYS.JOBS);
+    
+    const workerCount = users.filter(u => u.role === 'job_seeker').length;
+    const companyCount = users.filter(u => u.role === 'employer').length;
+    const jobCount = jobs.length;
+
+    setStats({
+      workers: workerCount,
+      jobs: jobCount,
+      companies: companyCount,
+    });
+  }, []);
+
   return (
     <div>
       <section
@@ -244,7 +266,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '8px',
                 }}
               >
-                500+
+                {stats.workers}
               </div>
               <p style={{ color: '#666' }}>Active Workers</p>
             </div>
@@ -258,7 +280,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '8px',
                 }}
               >
-                1000+
+                {stats.jobs}
               </div>
               <p style={{ color: '#666' }}>Jobs Posted</p>
             </div>
@@ -272,7 +294,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '8px',
                 }}
               >
-                200+
+                {stats.companies}
               </div>
               <p style={{ color: '#666' }}>Companies</p>
             </div>
