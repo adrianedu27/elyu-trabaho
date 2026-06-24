@@ -25,7 +25,7 @@ export default function Login({ onLogin, currentUser }) {
       if (user) {
         onLogin(user);
       } else {
-        setError('Mali ang email o password. Pakisubukang muli.');
+        setError('Invalid email or password. Please try again.');
       }
       setLoading(false);
     }, 500);
@@ -46,7 +46,7 @@ export default function Login({ onLogin, currentUser }) {
             🏗️ ELYU Trabaho
           </h1>
           <p style={{ margin: 0, color: 'var(--text-secondary)' }}>
-            Mag-login sa iyong account
+            Login to your account
           </p>
         </div>
 
@@ -86,13 +86,13 @@ export default function Login({ onLogin, currentUser }) {
             className="btn btn-primary btn-block"
             disabled={loading}
           >
-            {loading ? 'Sandali lang...' : 'Mag-login'}
+            {loading ? 'Please wait...' : 'Login'}
           </button>
 
           <p style={{ textAlign: 'center', marginTop: 'var(--spacing-lg)', color: 'var(--text-secondary)' }}>
-            Wala pang account?{' '}
+            Don't have an account?{' '}
             <Link href="/register" style={{ color: 'var(--primary)', fontWeight: 600 }}>
-              Mag-register dito
+              Register here
             </Link>
           </p>
         </form>

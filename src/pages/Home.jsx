@@ -31,7 +31,7 @@ export default function Home({ currentUser }) {
               color: '#e5e7eb',
             }}
           >
-            Maghanap ng trabaho sa konstruksyon o kumuha ng mga skilled workers dito sa La Union.
+            Find construction jobs or hire skilled workers in La Union.
           </p>
 
           <div
@@ -45,7 +45,7 @@ export default function Home({ currentUser }) {
             {!currentUser ? (
               <>
                 <Link href="/register" className="btn btn-secondary btn-lg">
-                  Magsimula Na
+                  Get Started
                 </Link>
 
                 <Link
@@ -56,12 +56,12 @@ export default function Home({ currentUser }) {
                     color: 'white',
                   }}
                 >
-                  Mag-login
+                  Login
                 </Link>
               </>
             ) : (
               <Link href="/dashboard" className="btn btn-secondary btn-lg">
-                Pumunta sa Dashboard
+                Go to Dashboard
               </Link>
             )}
           </div>
@@ -83,7 +83,7 @@ export default function Home({ currentUser }) {
               fontWeight: 'bold',
             }}
           >
-            Paano Ito Gamitin?
+            How it Works
           </h2>
 
           <div
@@ -118,7 +118,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '12px',
                 }}
               >
-                Para sa mga Workers
+                For Workers
               </h3>
 
               <p
@@ -127,7 +127,7 @@ export default function Home({ currentUser }) {
                   lineHeight: '1.6',
                 }}
               >
-                Mag-browse ng mga available na trabaho, mag-apply sa mga posisyon na swak sa skills mo, at i-track ang iyong mga applications.
+                Browse available jobs, apply to positions that match your skills, and keep track of your applications.
               </p>
             </div>
 
@@ -155,7 +155,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '12px',
                 }}
               >
-                Para sa mga Kumpanya
+                For Companies
               </h3>
 
               <p
@@ -164,7 +164,7 @@ export default function Home({ currentUser }) {
                   lineHeight: '1.6',
                 }}
               >
-                Mag-post ng mga trabaho, i-manage ang inyong mga proyekto, at bumuo ng team kasama ang mga mahuhusay na professionals.
+                Post job openings, manage your projects, and build your team with reliable professionals.
               </p>
             </div>
 
@@ -192,7 +192,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '12px',
                 }}
               >
-                I-track ang Progress
+                Track Progress
               </h3>
 
               <p
@@ -201,7 +201,7 @@ export default function Home({ currentUser }) {
                   lineHeight: '1.6',
                 }}
               >
-                Tingnan ang status ng iyong mga applications o i-monitor ang performance ng iyong workforce sa real-time.
+                Check the status of your applications or monitor project performance in real-time.
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function Home({ currentUser }) {
               fontWeight: 'bold',
             }}
           >
-            Overview ng Platform
+            Platform Overview
           </h2>
 
           <div
@@ -295,7 +295,7 @@ export default function Home({ currentUser }) {
               fontWeight: 'bold',
             }}
           >
-            Handa Ka Na Bang Magsimula?
+            Ready to Start?
           </h2>
 
           <p
@@ -305,12 +305,12 @@ export default function Home({ currentUser }) {
               fontSize: '16px',
             }}
           >
-            Sumali na sa lumalaking construction workforce platform sa La Union.
+            Join the construction workforce platform in La Union today.
           </p>
 
           {!currentUser && (
             <Link href="/register" className="btn btn-primary btn-lg">
-              Gumawa ng Account
+              Create Account
             </Link>
           )}
         </div>
