@@ -1,5 +1,6 @@
 import { STORAGE_KEYS, getAll, add } from './storage.js';
 
+// initial data for testing
 export function initializeSeedData() {
   if (getAll(STORAGE_KEYS.USERS).length > 0) {
     return;
@@ -55,7 +56,7 @@ export function initializeSeedData() {
       email: 'admin@elyu.com',
       password: 'admin123',
       role: 'admin',
-      avatar: '👨‍💻',
+      avatar: '👨+💻',
       createdAt: new Date().toISOString(),
     },
   ];

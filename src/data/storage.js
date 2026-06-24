@@ -1,7 +1,5 @@
-/**
- * Storage utility for managing application data with localStorage
- */
-
+// Local storage helpers for elyu-trabaho
+1
 const STORAGE_KEYS = {
   USERS: 'elyu_users',
   JOBS: 'elyu_jobs',
@@ -10,9 +8,7 @@ const STORAGE_KEYS = {
   CURRENT_USER: 'elyu_current_user',
 };
 
-/**
- * Get all items from a storage collection
- */
+// get all items
 export function getAll(key) {
   try {
     const data = localStorage.getItem(key);
@@ -23,17 +19,13 @@ export function getAll(key) {
   }
 }
 
-/**
- * Get a single item by ID
- */
+// get by id
 export function getById(key, id) {
   const items = getAll(key);
   return items.find((item) => item.id === id);
 }
 
-/**
- * Add a new item to a collection
- */
+// add new item
 export function add(key, item) {
   try {
     const items = getAll(key);
@@ -51,9 +43,7 @@ export function add(key, item) {
   }
 }
 
-/**
- * Update an existing item
- */
+// update item
 export function update(key, id, updates) {
   try {
     const items = getAll(key);
@@ -73,9 +63,7 @@ export function update(key, id, updates) {
   }
 }
 
-/**
- * Delete an item by ID
- */
+// delete item
 export function remove(key, id) {
   try {
     const items = getAll(key);
@@ -88,9 +76,7 @@ export function remove(key, id) {
   }
 }
 
-/**
- * Clear all items from a collection
- */
+// clear collection
 export function clear(key) {
   try {
     localStorage.setItem(key, JSON.stringify([]));
@@ -101,16 +87,12 @@ export function clear(key) {
   }
 }
 
-/**
- * Generate a unique ID
- */
+// simple id generator
 export function generateId() {
   return `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-/**
- * Get current logged-in user
- */
+// auth helpers
 export function getCurrentUser() {
   try {
     const user = localStorage.getItem(STORAGE_KEYS.CURRENT_USER);
@@ -121,9 +103,6 @@ export function getCurrentUser() {
   }
 }
 
-/**
- * Set current logged-in user
- */
 export function setCurrentUser(user) {
   try {
     localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(user));
@@ -132,9 +111,6 @@ export function setCurrentUser(user) {
   }
 }
 
-/**
- * Clear current user (logout)
- */
 export function clearCurrentUser() {
   try {
     localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
