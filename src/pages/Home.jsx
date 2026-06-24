@@ -21,7 +21,7 @@ export default function Home({ currentUser }) {
               color: '#f59e0b',
             }}
           >
-            Construction Jobs & Workforce
+            ELYU Trabaho
           </h1>
 
           <p
@@ -31,7 +31,7 @@ export default function Home({ currentUser }) {
               color: '#e5e7eb',
             }}
           >
-            Find construction work or hire skilled workers in La Union
+            Maghanap ng trabaho sa konstruksyon o kumuha ng mga skilled workers dito sa La Union.
           </p>
 
           <div
@@ -45,7 +45,7 @@ export default function Home({ currentUser }) {
             {!currentUser ? (
               <>
                 <Link href="/register" className="btn btn-secondary btn-lg">
-                  Get Started
+                  Magsimula Na
                 </Link>
 
                 <Link
@@ -56,12 +56,12 @@ export default function Home({ currentUser }) {
                     color: 'white',
                   }}
                 >
-                  Sign In
+                  Mag-login
                 </Link>
               </>
             ) : (
               <Link href="/dashboard" className="btn btn-secondary btn-lg">
-                Dashboard
+                Pumunta sa Dashboard
               </Link>
             )}
           </div>
@@ -83,7 +83,7 @@ export default function Home({ currentUser }) {
               fontWeight: 'bold',
             }}
           >
-            How it Works
+            Paano Ito Gamitin?
           </h2>
 
           <div
@@ -118,7 +118,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '12px',
                 }}
               >
-                For Workers
+                Para sa mga Workers
               </h3>
 
               <p
@@ -127,8 +127,7 @@ export default function Home({ currentUser }) {
                   lineHeight: '1.6',
                 }}
               >
-                Browse available jobs, apply to positions that match your
-                skills, and track your applications.
+                Mag-browse ng mga available na trabaho, mag-apply sa mga posisyon na swak sa skills mo, at i-track ang iyong mga applications.
               </p>
             </div>
 
@@ -156,7 +155,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '12px',
                 }}
               >
-                For Companies
+                Para sa mga Kumpanya
               </h3>
 
               <p
@@ -165,8 +164,7 @@ export default function Home({ currentUser }) {
                   lineHeight: '1.6',
                 }}
               >
-                Post jobs, manage projects, and build your team with qualified
-                construction professionals.
+                Mag-post ng mga trabaho, i-manage ang inyong mga proyekto, at bumuo ng team kasama ang mga mahuhusay na professionals.
               </p>
             </div>
 
@@ -194,7 +192,7 @@ export default function Home({ currentUser }) {
                   marginBottom: '12px',
                 }}
               >
-                Track Progress
+                I-track ang Progress
               </h3>
 
               <p
@@ -203,8 +201,7 @@ export default function Home({ currentUser }) {
                   lineHeight: '1.6',
                 }}
               >
-                Monitor applications, manage projects, and track workforce
-                performance in real-time.
+                Tingnan ang status ng iyong mga applications o i-monitor ang performance ng iyong workforce sa real-time.
               </p>
             </div>
           </div>
@@ -226,7 +223,7 @@ export default function Home({ currentUser }) {
               fontWeight: 'bold',
             }}
           >
-            Platform Overview
+            Overview ng Platform
           </h2>
 
           <div
@@ -298,7 +295,7 @@ export default function Home({ currentUser }) {
               fontWeight: 'bold',
             }}
           >
-            Ready to Start?
+            Handa Ka Na Bang Magsimula?
           </h2>
 
           <p
@@ -308,12 +305,12 @@ export default function Home({ currentUser }) {
               fontSize: '16px',
             }}
           >
-            Join the construction workforce platform
+            Sumali na sa lumalaking construction workforce platform sa La Union.
           </p>
 
           {!currentUser && (
             <Link href="/register" className="btn btn-primary btn-lg">
-              Create Account
+              Gumawa ng Account
             </Link>
           )}
         </div>

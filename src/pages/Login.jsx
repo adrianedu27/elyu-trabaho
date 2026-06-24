@@ -17,7 +17,7 @@ export default function Login({ onLogin, currentUser }) {
     setError('');
     setLoading(true);
 
-    // Simulate API call
+    // Simulate login delay
     setTimeout(() => {
       const users = getAll('elyu_users');
       const user = users.find((u) => u.email === email && u.password === password);
@@ -25,7 +25,7 @@ export default function Login({ onLogin, currentUser }) {
       if (user) {
         onLogin(user);
       } else {
-        setError('Invalid email or password');
+        setError('Mali ang email o password. Pakisubukang muli.');
       }
       setLoading(false);
     }, 500);
@@ -46,7 +46,7 @@ export default function Login({ onLogin, currentUser }) {
             🏗️ ELYU Trabaho
           </h1>
           <p style={{ margin: 0, color: 'var(--text-secondary)' }}>
-            Login to your account
+            Mag-login sa iyong account
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function Login({ onLogin, currentUser }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
+              placeholder="juan@email.com"
               required
             />
           </div>
@@ -86,17 +86,15 @@ export default function Login({ onLogin, currentUser }) {
             className="btn btn-primary btn-block"
             disabled={loading}
           >
-            {loading ? 'Logging in...' : 'Login'}
+            {loading ? 'Sandali lang...' : 'Mag-login'}
           </button>
 
           <p style={{ textAlign: 'center', marginTop: 'var(--spacing-lg)', color: 'var(--text-secondary)' }}>
-            Don't have an account?{' '}
+            Wala pang account?{' '}
             <Link href="/register" style={{ color: 'var(--primary)', fontWeight: 600 }}>
-              Register here
+              Mag-register dito
             </Link>
           </p>
-
-
         </form>
       </div>
     </div>
